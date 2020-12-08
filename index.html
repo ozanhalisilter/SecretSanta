@@ -27,7 +27,7 @@
             }
 
             body {
-                background-image: url(assets/santa.png);
+                background-image: url(assets/kablosuzbeyin.png);
                 background-position: bottom right;
                 background-repeat: no-repeat;
 
@@ -154,39 +154,38 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Secret Santa Generator</h1>
-                    <p>No signup, no email, no bullshit. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
-                    <p>In the most common case (no exclusion rules, pair each guest with another at random), enter the name of your guests one line at a time. Once done, press "generate" and you're all set: send the generated links to your guests (by mail, chat, whatever floats your boat) and their pairing will be revealed to them (and only them) once they open the link.</p>
-                    <h2>Where does this tool come from?</h2>
-                    <p>I wanted to make a Secret Santa over Facebook without having to reveal to anyone my guests email addresses (so nothing that would require a backend). I also wanted not to know who was paired with me, so I had to find a way to somehow obfuscate the information. And being a developer, well, my first thought was "Let's AES it, for fun and profits!". Classic.</p>
+                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Yılbaşı Çekiliş Oluşturucu</h1>
+                    <p>Giriş yapmana gerek yok, e-postaya gerek yok. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
+                    <p>En yaygın durumda (hariç tutma kuralı yok, her misafirle rastgele eşleştirin), konuklarınızın adını satır satır girin. Bittiğinde, "oluştur" a basın ve artık hazırsınız: oluşturulan bağlantıları misafirlerinize gönderin ve bağlantılarını açtıklarında eşleşmeleri onlara (ve yalnızca onlara) gösterilecektir.</p>
+
                 </div>
             </div>
 
             <form id="form" class="part">
                 <textarea id="input" class="input" autofocus></textarea>
-                <button type="submit" class="generate">Generate your pairings</button>
+                <button type="submit" class="generate">Kurayı çekmek için tıkla</button>
                 <div id="result" class="result none"></div>
             </form>
 
         </div>
 
         <script id="input-placeholder" type="text/placeholder">
-            # You can add a user by adding a line
-            Santa
+            # Yeni bir kullanıcı eklemek için alt satıra inebilirsin
+            Ozan
 
-            # You can add some details if you want to, using parentheses after the name
-            Nicholas (the elf)
+            # Detay vermek için parentez kullanabilirsin
+            Ozan (the elf)
 
-            # You can prevent someone from being paired with someone else
-            Maël !Aurélie
-            Aurélie !Maël
+            # Eşleşmelerini istemediğin kişiler için ünlem kullanabilirsin
+            Ozan !Ramazan
+            Ramazan !Ozan
 
-            # You can also exclude someone from being paired with multiple people
-            # Careful: too many exclusion rules can make your secret santa less interesting!
-            Rudolph !Santa !Nicholas (the elf)
+            # Birden çok kişiyle eşleştirmemek için de ünlem kullanabilirsin
+            # Dikkat: Çok fazla dışlamak bütün zevki mahvedebilir!
+            Cengiz !Ramazan !Ozan (the elf)
 
-            # You can also cheat a bit and force someone to be paired with another
-            Nicholas (the saint) =Nicholas (the elf)
+            # Birazcık hile ile bütün olaylara karışabilirsin :=)
+            Cengiz = Ozan (the elf)
 
             ...
         </script>
